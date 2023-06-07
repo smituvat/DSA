@@ -9,16 +9,16 @@ package main
 import "fmt"
 
 func main() {
-	nums := []int{1, 2, 3, 4}
-	isUnique := containsDuplicate(nums)
-	fmt.Print(isUnique)
+	nums := []int{1, 1, 3, 4}
+	res := containsDuplicate(nums)
+	fmt.Print(res)
 
 }
 
 func containsDuplicate(nums []int) bool {
 	m := make(map[int]int)
 	for k, v := range nums {
-		if _, notunique := m[v]; notunique {
+		if _, isunique := m[v]; isunique {
 			return true
 		}
 		m[v] = k
