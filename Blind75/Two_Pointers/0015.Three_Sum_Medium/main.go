@@ -6,6 +6,16 @@ Output: [[-1,-1,2],[-1,0,1]]
 */
 package main
 
+import (
+	"fmt"
+)
+
 func main() {
+	nums := []int{-1, 0, 1, 2, -1, -4}
+	res := threeSum(nums)
+	fmt.Print(res)
+}
+
+func threeSum(nums []int) [][]int {
 
 }
