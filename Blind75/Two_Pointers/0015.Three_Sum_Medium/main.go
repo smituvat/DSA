@@ -17,5 +17,6 @@ func main() {
 }
 
 func threeSum(nums []int) [][]int {
-
+	arraySet := [][]int{{}}
+	return arraySet
 }
