@@ -8,6 +8,7 @@ package main
 
 import (
 	"fmt"
+	"sort"
 )
 
 func main() {
@@ -17,6 +18,35 @@ func main() {
 }
 
 func threeSum(nums []int) [][]int {
-	arraySet := [][]int{{}}
-	return arraySet
+	// first sort the array as we shouldnt have duplicate values
+	sort.Ints(nums)
+
+	n := len(nums)
+	var result [][]int
+
+	for a := 0; a < n-2; a++ {
+
+		// condition to eleminate duplicate vals
+		if a > 0 && nums[a] == nums[a-1] {
+			continue
+		}
+		b := a + 1
+		c := n - 1
+		for b < c {
+			sum := nums[a] + nums[b] + nums[c]
+			if sum == 0 {
+				result = append(result, []int{nums[a], nums[b], nums[c]})
+
+				c--
+				for b < c && nums[c] == nums[c+1] {
+					c--
+				}
+			} else if sum > 0 {
+				c--
+			} else {
+				b++
+			}
+		}
+	}
+	return result
 }
