@@ -1,3 +1,5 @@
+package main
+
 func maxProfit(prices []int, fee int) int {
 	dp := make([][2]int, len(prices))
 	dp[0][0] = 0          //0 stands for hold cash on day 0
