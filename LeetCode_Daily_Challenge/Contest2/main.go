@@ -8,7 +8,8 @@ func main() {
 }
 
 func longestString(x int, y int, z int) int {
-	a := "AA"
-	b := "BB"
-	c := "AB"
+	// a := "AA"
+	// b := "BB"
+	// c := "AB"
+	return 0
 }
