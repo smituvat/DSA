@@ -28,5 +28,6 @@ func twoSum(nums []int, target int) []int {
 		}
 		m[num] = idx
 	}
+
 	return nil
 }
